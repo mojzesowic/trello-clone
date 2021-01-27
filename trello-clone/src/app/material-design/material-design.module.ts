@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatListModule } from '@angular/material/list';
 
 
 @NgModule({
@@ -9,12 +11,16 @@ import { MatToolbarModule } from '@angular/material/toolbar';
   imports: [
     MatCardModule,
     MatIconModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatButtonModule,
+    MatListModule
   ],
   exports: [
     MatCardModule,
     MatIconModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatButtonModule,
+    MatListModule
   ]
 })
 export class MaterialDesignModule { }

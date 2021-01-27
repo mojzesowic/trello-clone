@@ -1,7 +1,15 @@
+@import './../../../node_modules/dragula/dist/dragula.min.css';
 mat-card {
-    height: 100%;
+    display: inline-block;
+    width: 20%;
+    margin-left: 10px;
+    vertical-align: top;
 }
 
-mat-card-title {
-    color: white;
+mat-list-item:hover {
+    background-color: lightcoral;
+}
+
+mat-list-item {
+    transition: background-color .1s ease-in;
 }

@@ -10,6 +10,9 @@ import { BoardListComponent } from './board-list/board-list.component';
 import { NavbarComponent } from './navbar/navbar.component';
 
 import { MaterialDesignModule } from './material-design/material-design.module'
+import { BaseRouterModule } from './base-router/base-router.module';
+import { DragulaModule } from 'ng2-dragula';
+import { BoardService } from './board.service';
 
 @NgModule({
   declarations: [
@@ -22,9 +25,11 @@ import { MaterialDesignModule } from './material-design/material-design.module'
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialDesignModule
+    MaterialDesignModule,
+    BaseRouterModule,
+    DragulaModule.forRoot()
   ],
-  providers: [],
+  providers: [BoardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
