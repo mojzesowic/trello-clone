@@ -26,8 +26,12 @@ export class RestService {
       .catch(this.handleError);
   }
 
-  executePost(url: string, data: object) {
-    return this._http.post(serverURL + url, data)
+  executePost(url: string, data: object, headers?: { key: string, value: string }[]) {
+    const header = new Headers();
+    if (headers) {
+      headers.forEach((h) => header.append(h.key, h.value));
+    }
+    return this._http.post(serverURL + url, data, { headers: header })
       .map(this.extractData)
       .catch(this.handleError);
   }

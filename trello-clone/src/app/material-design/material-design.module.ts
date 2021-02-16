@@ -6,30 +6,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field'; 
 
 
 @NgModule({
-  declarations: [],
-  imports: [
-    MatCardModule,
-    MatIconModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatListModule,
-    MatDialogModule,
-    MatInputModule,
-    MatFormFieldModule
-  ],
-  exports: [
-    MatCardModule,
-    MatIconModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatListModule,
-    MatDialogModule,
-    MatInputModule,
-    MatFormFieldModule
-  ]
+  imports: [MatCardModule, MatIconModule, MatToolbarModule, MatButtonModule, MatListModule,
+    MatDialogModule, MatInputModule],
+  exports: [MatCardModule, MatIconModule, MatToolbarModule, MatButtonModule, MatListModule,
+    MatDialogModule, MatInputModule]
 })
 export class MaterialDesignModule { }

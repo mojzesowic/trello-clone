@@ -27,7 +27,7 @@ export class BoardListComponent implements OnInit {
   }
 
   createBoard() {
-    this._dialog.openPrompt('Create new Board', 'Please enter the title for your new Board:')
+    this._dialog.openPrompt('Create new Board', 'Title:')
       .subscribe((name) => {
         if (name) {
           this._board.createBoard(name).subscribe(() => this.loadBoards());
